@@ -7,6 +7,10 @@ import java.util.List;
 /**
  * Created by rickb on 2-5-2017.
  */
+
+/**
+ * this class will store all individual news messages
+ */
 public class NieuwsResponse {
     private  String title;
     private  String link;
@@ -14,7 +18,6 @@ public class NieuwsResponse {
     private  String pubDate;
     private  String guid;
     private  String enclosure ;
-    private List<String> categories = new ArrayList<>();
     private  String dc_creator;
     private  String dc_rights;
     private  String atom_link;
@@ -37,7 +40,6 @@ public class NieuwsResponse {
         return atom_link;
     }
 
-
     public String getLink() {
         return link;
     }
@@ -54,20 +56,12 @@ public class NieuwsResponse {
         this.link = link;
     }
 
-    public List<String> getCategories() {
-        return categories;
-    }
-
     public String getDc_creator() {
         return dc_creator;
     }
 
     public String getDc_rights() {
         return dc_rights;
-    }
-
-    public void setCategories(List<String> categories) {
-        this.categories = categories;
     }
 
     public String getEnclosure() {
@@ -100,21 +94,6 @@ public class NieuwsResponse {
 
     public void setPubDate(String pubDate) {
         this.pubDate = pubDate;
-    }
-
-    @Override
-    public String toString() {
-        return "Feed{title:" +
-                title + ", description:" +
-                description +", link:" +
-                link +", atom_link" +
-                atom_link+", language:" +
-                pubDate + ", pubDate" +
-                guid + ", guid" +
-                enclosure + ", enclosure" +
-                dc_creator + "dc creator" +
-                dc_rights + "dc rights" +
-                "}";
     }
 
 }

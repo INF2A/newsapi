@@ -15,25 +15,20 @@ import javax.xml.stream.events.XMLEvent;
 /**
  * Created by rickb on 2-5-2017.
  */
+
+/**
+ * this class will read the xml data and sets the individual responses to a new feed
+ */
 public class RSSFeedParser {
     static final String ITEM = "item";
     static final String TITLE = "title";
     static final String LINK = "link";
     static final String DESCRIPTION ="description";
-    static final String ATOM_LINK = "atom:link";
-    static final String LANGUAGE = "language";
-    static final String COPYRIGHT = "copyright";
-    static final String LAST_BUILD_DATE ="lastBuildDate";
-    static final String TTL = "ttl";
-    static final String ATOM_LOGO = "atom:logo";
     static final String PUB_DATE = "pubDate";
     static final String GUID = "guid";
-    static final String CATEGORY = "category";
     static final String ENCLOSURE = "enclosure";
-    static final String DC_CREATOR = "dc:creator";
-    static final String DC_RIGHTS = "dc:rights";
-    static  final String PICTURE = "thumbnail";
-    static  final String CONTENT_PICTURE = "content";
+    static final String PICTURE = "thumbnail";
+    static final String CONTENT_PICTURE = "content";
 
     private URL url;
     static final String BASE_URL = "";
@@ -60,13 +55,8 @@ public class RSSFeedParser {
             String pubDate = "";
             String guid = "";
             String enclosure = "";
-            String categories = "";
-            String dc_creator = "";
-            String dc_rights = "";
-            String atom_link = "";
             String language = "";
             String copyright = "";
-
 
             // First create a new XMLInputFactory
             XMLInputFactory inputFactory = XMLInputFactory.newInstance();
@@ -77,14 +67,13 @@ public class RSSFeedParser {
             // read the XML document
             while (eventReader.hasNext()) {
                 XMLEvent event = eventReader.nextEvent();
-                //Attribute a = (Attribute) eventReader.next();
                 if (event.isStartElement()) {
                     String localPart = event.asStartElement().getName().getLocalPart();
                     switch (localPart) {
                         case ITEM:
                             if (isFeedHeader) {
                                 isFeedHeader = false;
-                                feed = new Feed(title, link, description, language, copyright, pubDate);
+                                feed = new Feed();
                             }
                             event = eventReader.nextEvent();
                             break;
@@ -130,7 +119,7 @@ public class RSSFeedParser {
                         message.setTitle(title);
                         message.setEnclosure(enclosure);
                         message.setPubDate(pubDate);
-                        feed.getEntries().add(message);
+                        feed.setEntries(message);
                         event = eventReader.nextEvent();
                         continue;
                     }
@@ -142,6 +131,7 @@ public class RSSFeedParser {
         return feed;
     }
 
+
     private String getCharacterData(XMLEvent event, XMLEventReader eventReader)
             throws XMLStreamException {
         String result = "";
@@ -152,6 +142,10 @@ public class RSSFeedParser {
         return result;
     }
 
+    /**
+     * reads the xml file
+     * @return
+     */
     private InputStream read() {
         try {
             return url.openStream();
@@ -160,10 +154,20 @@ public class RSSFeedParser {
         }
     }
 
+    /**
+     * removes all double quotes with single quotes
+     * @param toRemove string to removes qoutes from
+     * @return return the string with the double quotes replaced by single quotes
+     */
     private String removeQuotes(String toRemove)
     {
         return toRemove.replace("\"", "'");
     }
+
+    /**
+     *
+     * @return returns the entry data from the feed object.
+     */
     public String entrieData()
     {
         return feed.enteriesToString();
