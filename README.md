@@ -1,8 +1,8 @@
-# news api
+# News api
 This api is made for project Cluster & SmartMirror, it is designed to run on a raspberry pi in a docker container. the application uses a tomcat server in order to work, the default port is 8080. make sure to setup a tomcat server if you havent already.
 this is a RESTfull api which will return news items in JSON format including the title, discription, publication date and a link to a image. 
 
-# setup tomcat server
+# Setup tomcat server
 
 https://www.jetbrains.com/help/idea/2017.1/creating-and-running-your-first-web-application.html
 
@@ -10,19 +10,19 @@ https://www.jetbrains.com/help/idea/2017.1/creating-and-running-your-first-web-a
 
 do the following to make a api call when the application is running
 
-connect to the application(should start when you run the application): <br>
+<b>connect to the application(should start when you run the application):</b><br>
 {ip_cluster}:{port_api}/<br>
 http://localhost:8080/<br>
 
-to get the default news feed<br> 
+<b>to get the default news feed</b><br> 
 {ip_cluster}:{poort_api}/news <br>
 http://localhost:8080/news<br>
 
-to get the news feed of a specific news channel<br>
+<b>to get the news feed of a specific news channel</b><br>
 {ip_cluster}:{port_api}/news/{channel} <br>
 http://localhost:8080/news/bbc<br>
 
-to get the news feed of a specific channel and preferenced category<br>
+<b>to get the news feed of a specific channel and preferenced category</b><br>
 {ip_cluster}:{port_api}/news/{channel}/{preference} <br>
 http://localhost:8080/news/bbc/world<br>
 
