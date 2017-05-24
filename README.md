@@ -4,6 +4,8 @@ this is a RESTfull api which will return news items in JSON format including the
 
 # setup tomcat server
 
+https://www.jetbrains.com/help/idea/2017.1/creating-and-running-your-first-web-application.html
+
 # Examples
 
 do the following to make a api call when the application is running
