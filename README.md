@@ -25,7 +25,7 @@ to get the news feed of a specific channel and preferenced category
 http://localhost:8080/news/bbc/world
 
 JSON feed example:
-
+<code>
 {
     "feed":[
        {
@@ -42,7 +42,7 @@ JSON feed example:
        }
    ]
 }
-
+</code>
 
 
 # Cluster
