@@ -29,9 +29,8 @@ http://localhost:8080/news/bbc/world<br>
 <b>JSON feed example:</b> 
 <br>
 
-{<br>
-"feed":[<br>
-<br>       
+{
+"feed":[    
 {<br>          
 "title":"France Chooses a Leader, and Takes a Step Into the Unknown",<br>
 "description":"In a deeply divided country, some ask whether either Emmanuel Macron or Marine Le Pen will have enough authority to actually govern.",<br>
