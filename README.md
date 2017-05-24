@@ -8,21 +8,21 @@ this is a RESTfull api which will return news items in JSON format including the
 
 do the following to make a api call when the application is running
 
-connect to the application:
-{ip_cluster}:{port_api}/
-http://localhost:8080/
+connect to the application: <br>
+{ip_cluster}:{port_api}/<br>
+http://localhost:8080/<br>
 
-to get the default news feed 
-{ip_cluster}:{poort_api}/news 
-http://localhost:8080/news
+to get the default news feed<br> 
+{ip_cluster}:{poort_api}/news <br>
+http://localhost:8080/news<br>
 
-to get the news feed of a specific news channel
-{ip_cluster}:{port_api}/news/{channel} 
-http://localhost:8080/news/bbc
+to get the news feed of a specific news channel<br>
+{ip_cluster}:{port_api}/news/{channel} <br>
+http://localhost:8080/news/bbc<br>
 
-to get the news feed of a specific channel and preferenced category
-{ip_cluster}:{port_api}/news/{channel}/{preference} 
-http://localhost:8080/news/bbc/world
+to get the news feed of a specific channel and preferenced category<br>
+{ip_cluster}:{port_api}/news/{channel}/{preference} <br>
+http://localhost:8080/news/bbc/world<br>
 
 JSON feed example: 
 <br>
