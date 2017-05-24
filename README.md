@@ -50,4 +50,8 @@ JSON feed example:
 
 # Cluster
 
+more information about the cluster: https://github.com/INF2A/RPI-docker-cluster
+
 # SmartMirror
+
+more information about the SmartMirror: https://github.com/INF2A/Smart-mirror
