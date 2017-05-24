@@ -28,24 +28,25 @@ http://localhost:8080/news/bbc/world<br>
 
 <b>JSON feed example:</b> 
 <br>
-<code>
-{
-    "feed":[
-       {
-          "title":"France Chooses a Leader, and Takes a Step Into the Unknown",
-          "description":"In a deeply divided country, some ask whether either Emmanuel Macron or Marine Le Pen will have enough authority to actually govern.",
-          "picture":"https://static01.nyt.com/images/2017/05/07/world/jp-france/jp-france-moth.jpg",
-          "pubDate":"Sat, 06 May 2017 16:27:05 GMT"
-       },
-       {
-          "title":"Why Macron Won: Luck, Skill and France",
-          "description":"Emmanuel Macron",
-          "picture":"https://static01.nyt.com/images/2017/05/08/world/08analysis-8/08analysis-8-moth.jpg",
-          "pubDate":"Sun, 07 May 2017 22:25:22 GMT"
-       }
-   ]
-}
-</code>
+
+{<br>
+"feed":[<br>
+<br>       
+{<br>          
+"title":"France Chooses a Leader, and Takes a Step Into the Unknown",<br>
+"description":"In a deeply divided country, some ask whether either Emmanuel Macron or Marine Le Pen will have enough authority to actually govern.",<br>
+"picture":"https://static01.nyt.com/images/2017/05/07/world/jp-france/jp-france-moth.jpg",<br>
+"pubDate":"Sat, 06 May 2017 16:27:05 GMT"<br>
+},<br>
+{<br>
+"title":"Why Macron Won: Luck, Skill and France",<br>
+"description":"Emmanuel Macron",<br>
+"picture":"https://static01.nyt.com/images/2017/05/08/world/08analysis-8/08analysis-8-moth.jpg",<br>
+"pubDate":"Sun, 07 May 2017 22:25:22 GMT"<br>
+}<br>
+]<br>
+}<br>
+
 
 
 # Cluster
