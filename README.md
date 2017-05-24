@@ -24,7 +24,8 @@ to get the news feed of a specific channel and preferenced category
 {ip_cluster}:{port_api}/news/{channel}/{preference} 
 http://localhost:8080/news/bbc/world
 
-JSON feed example: \n
+JSON feed example: 
+<br>
 <code>
 {
     "feed":[
