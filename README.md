@@ -26,7 +26,7 @@ http://localhost:8080/news/bbc<br>
 {ip_cluster}:{port_api}/news/{channel}/{preference} <br>
 http://localhost:8080/news/bbc/world<br>
 
-JSON feed example: 
+<b>JSON feed example:</b> 
 <br>
 <code>
 {
