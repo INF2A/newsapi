@@ -10,7 +10,7 @@ https://www.jetbrains.com/help/idea/2017.1/creating-and-running-your-first-web-a
 
 do the following to make a api call when the application is running
 
-connect to the application: <br>
+connect to the application(should start when you run the application): <br>
 {ip_cluster}:{port_api}/<br>
 http://localhost:8080/<br>
 
